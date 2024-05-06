@@ -1,4 +1,4 @@
-const defaultFile = "https://stonegatesl.com/wp-content/uploads/2021/01/avatar-300x300.jpg";
+const defaultFile = 'https://stonegatesl.com/wp-content/uploads/2021/01/avatar-300x300.jpg';
 
 const file = document.getElementById('foto');
 const img = document.getElementById('img');
@@ -8,8 +8,9 @@ file.addEventListener('change', e => {
         reader.onload = function (e) {
             img.src = e.target.result;
         }
-        reader.readAsDataURL(e.target.files[0])
+        console.log(reader.readAsDataURL(e.target.files[0]));
     } else {
-        img.src = defaultFile;
+
+        console.log(img.src = defaultFile);
     }
-}); 
+});
