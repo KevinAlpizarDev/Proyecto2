@@ -1,0 +1,61 @@
+body{
+
+background-image: url("/src/img/index-image.avif");
+background-size: cover;
+background-repeat: no-repeat;
+
+height: 100vh;
+}
+
+
+nav{
+display: flex;
+align-items: center;
+background-color: white;
+
+}
+
+.welcome-section{
+    margin-top: 50px;
+}
+section > div{
+display: flex;
+align-items: top;
+justify-content: center;
+
+    width: 100%;
+    height: 100px;
+    background-color: aqua;
+}
+
+.welcome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+max-height: 100px;
+width: 500px;
+background-color: aquamarine;
+border-top-right-radius: 40px;
+border-bottom-left-radius: 40px;
+/* background-color: lightgreen; */
+border: solid 1px black;
+
+}
+
+
+.login-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+width: 100%;
+
+height:350px;
+background-color: blue;
+
+}
+
+.register{
+
+
+
+}
