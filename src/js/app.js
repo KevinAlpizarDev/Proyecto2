@@ -40,7 +40,7 @@ newUserBtn.addEventListener('click', () => {
     submitBtn.innerText = 'Submit',
         modalTitle.innerText = "Fill the Form"
     isEdit = false
-    imgInput.src = ""
+    imgInput.src = "./image/Profile Icon.webp"
     form.reset()
 })
 
@@ -69,11 +69,14 @@ function showInfo() {
             <td>${index + 1}</td>
             <td><img src="${element.picture}" alt="" width="50" height="50"></td>
             <td>${element.employeeName}</td>
-            <td>${element.employeeEmail}</td>
+         
             <td>${element.employeeCity}</td>
+            <td>${element.employeeEmail}</td>
+     
+
 
             <td>
-              
+                <button class="btn btn-success" onclick="readInfo('${element.picture}', '${element.employeeName}', '${element.employeeCity}', '${element.employeeEmail}' data-bs-toggle="modal" data-bs-target="#readData"><i class="bi bi-eye"></i></button>
 
                 <button class="btn btn-primary" onclick="editInfo(${index}, '${element.picture}', '${element.employeeName}', '${element.employeeCity}', '${element.employeeEmail}')" data-bs-toggle="modal" data-bs-target="#userForm"><i class="bi bi-pencil-square"></i></button>
 
@@ -126,7 +129,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault()
 
     const information = {
-        picture: imgInput.src == undefined ? "./src/img/album-icon.svg" : imgInput.src,
+        picture: imgInput.src == undefined ? "./image/Profile Icon.webp" : imgInput.src,
         employeeName: userName.value,
 
         employeeCity: city.value,
@@ -151,45 +154,8 @@ form.addEventListener('submit', (e) => {
 
     form.reset()
 
-    imgInput.src = "./src/img/album-icon.svg"
+    imgInput.src = "./image/Profile Icon.webp"
 
     modal.style.display = "none"
     document.querySelector(".modal-backdrop").remove()
 })
-
-
-
-
-
-
-
-///////////////////////////////////////////////////////
-
-const modal = document.querySelector('.modal');
-const overlay = document.querySelector('.overlay');
-const btnCloseModal = document.querySelector('.close-modal');
-const btnsOpenModal = document.querySelectorAll('.show-modal');
-
-const openModal = function () {
-    modal.classList.remove('hidden');
-    overlay.classList.remove('hidden');
-};
-
-const closeModal = function () {
-    modal.classList.add('hidden');
-    overlay.classList.add('hidden');
-};
-
-for (let i = 0; i < btnsOpenModal.length; i++)
-    btnsOpenModal[i].addEventListener('click', openModal);
-
-btnCloseModal.addEventListener('click', closeModal);
-overlay.addEventListener('click', closeModal);
-
-document.addEventListener('keydown', function (e) {
-    // console.log(e.key);
-
-    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-        closeModal();
-    }
-});

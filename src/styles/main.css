@@ -1,248 +1,153 @@
-<<<<<<< HEAD
-/* table {
-=======
-
 body{
-padding: 5px;
-background-color: black;
-
-}
-
-
-
-
-:root {
-    --color-primario: #FFA500;
-    --tamano-fuente-titulo: 24px;
-  }
-
-
-
-/* 
-  .titulo {
-    font-size: var(--tamano-fuente-titulo);
+  padding: 5px;
+  background-color: black;
+  
   }
   
-  .subtitulo {
-    font-size: var(--tamano-fuente-subtitulo);
-  } */
-
-
-nav{
-    display: flex;
+  
+  
+  
+  :root {
+      --color-primario: #FFA500;
+      --tamano-fuente-titulo: 24px;
+    }
+  
+  
+  
+  /* 
+    .titulo {
+      font-size: var(--tamano-fuente-titulo);
+    }
     
-    align-items: center;
-background-color: #262829 ;
-
-justify-content: space-between;
-}
-
-h1{
-color: rgb(172, 224, 245);
-    font-family: "Poetsen One", sans-serif;
-    margin-left: 8px;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 40px;
-}
-
-#logout{
-    height:30px;
-    width: 200px;
-    color: #FFFFFF;
-    background-color: #FFA500;
-
-}
-
-#logout:hover{
+    .subtitulo {
+      font-size: var(--tamano-fuente-subtitulo);
+    } */
+  
+  
+  nav{
+      display: flex;
+      
+      align-items: center;
+  background-color: #262829 ;
+  
+  justify-content: space-between;
+  }
+  
+  h1{
+  color: rgb(172, 224, 245);
+      font-family: "Poetsen One", sans-serif;
+      margin-left: 8px;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 40px;
+  }
+  
+  #logout{
+      height:30px;
+      width: 200px;
+      color: #FFFFFF;
+      background-color: #FFA500;
+  
+  }
+  
+  #logout:hover{
+      
+      color: #000000;
+      background-color: #FFA500;
+  
+  }
+  
+  .name-app{
+      display: flex;
+      justify-content: start;
+      align-items: center;
+  height: 100%;
+  width: 50%;
+  background-color: red;
+  
+  
+  }
+   .quit{
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      height: 100%;
+      width: 50%;
+      background-color: red;
+      
+  } 
+  
+  table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
     
-    color: #000000;
-    background-color: #FFA500;
-
-}
-
-.name-app{
-    display: flex;
-    justify-content: start;
-    align-items: center;
-height: 100%;
-width: 50%;
-background-color: red;
-
-
-}
- .quit{
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    height: 100%;
-    width: 50%;
-    background-color: red;
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: center;
+      padding: 8px;
+    }
     
-} 
-
-table {
->>>>>>> nueva-rama-desde-eff5a86
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
+    tr:nth-child(even) {
+      background-color: #72f7bf;
+    }
   
-  td, th {
-    border: 1px solid #dddddd;
-    text-align: center;
-    padding: 8px;
-  }
   
-  tr:nth-child(even) {
-    background-color: #72f7bf;
-  }
-
-
-<<<<<<< HEAD
-  #userForm {
-    display: none;
-} */
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-  }
   
-  html {
-    font-size: 62.5%;
-    box-sizing: border-box;
-  }
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto ;
+      background-color: #ffffff;
+      padding: 9px;
+    }
+    .grid-item-1 {
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      background-color: rgba(0, 0, 0, 0.8);
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+    }
   
-  body {
-    font-family: sans-serif;
-    color: #333;
-    line-height: 1.5;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    background: linear-gradient(to top left, #28b487, #7dd56f);
-  }
   
-  .show-modal {
-    font-size: 2rem;
-    font-weight: 600;
-    padding: 1.75rem 3.5rem;
-    margin: 5rem 2rem;
-    border: none;
-    background-color: #fff;
-    color: #444;
-    border-radius: 10rem;
-    cursor: pointer;
-  }
+    /* ESTILO BOTON NEW PHOTO */
+    .new-photo{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 60px;
+      border-radius: 4px;
+      height: 65px;
+      width: 45px;
+      background-color: white;
+    }
   
-  .close-modal {
-    position: absolute;
-    top: 1.2rem;
-    right: 2rem;
-    font-size: 5rem;
-    color: #333;
-    cursor: pointer;
-    border: none;
-    background: none;
-  }
+    .grid-item-2 {
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+      height: 14.5em;
+      line-height: 1em;
+      overflow-x: hidden;
+      overflow-y: scroll;
+     
+      border: 1px solid;
+    }
   
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-  }
+    footer{
   
-  p {
-    font-size: 1.8rem;
-  }
+  background-color: #2196F3;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
   
-  /* -------------------------- */
-  /* CLASSES TO MAKE MODAL WORK */
-  .hidden {
-    display: none;
-  }
+    h2{
+  color: white;
   
-  .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-  
-    background-color: white;
-    padding: 6rem;
-    border-radius: 5px;
-    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
-    z-index: 10;
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(3px);
-    z-index: 5;
-=======
-
-  .grid-container {
-    display: grid;
-    grid-template-columns: auto auto ;
-    background-color: #ffffff;
-    padding: 9px;
-  }
-  .grid-item-1 {
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    background-color: rgba(0, 0, 0, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-  }
-
-
-  /* ESTILO BOTON NEW PHOTO */
-  .new-photo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 60px;
-    border-radius: 4px;
-    height: 65px;
-    width: 45px;
-    background-color: white;
-  }
-
-  .grid-item-2 {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-    height: 14.5em;
-    line-height: 1em;
-    overflow-x: hidden;
-    overflow-y: scroll;
-   
-    border: 1px solid;
-  }
-
-  footer{
-
-background-color: #2196F3;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  h2{
-color: white;
-
->>>>>>> nueva-rama-desde-eff5a86
-  }
+    }
