@@ -1,130 +1,63 @@
-html, body{
-    height:90%;
-    margin: 0%;
-  }
-
-
-.all-conteiner{
-    display: flex;
-    width:100vw;
-    height:100vh;
+body{
+background-color: aqua;
 }
 
-.left-conteiner{
+.welcome{
     display: flex;
     justify-content: center;
-    align-items: top;
-    width: 60%;
-    height: 100%;
-    /* background-color: #00523f; */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url("/src/img/png2.jpg");
-
-}
-
-.welcome-section{
-    display: flex;
     align-items: center;
-    justify-content: center;
-height: 10%;
-width: 70%;
-background-color: aliceblue;
-
-margin-top: 30px;
-animation-name: borderAnimation;
-animation-duration: 5s;
-animation-fill-mode: forwards;
-
+    width: 100%;
+    height: 50px;
+    background-color: blue;
 }
 
-@keyframes borderAnimation{
-
-0%{
-opacity: 0;
-border-top-right-radius: 0px;
-border-bottom-left-radius: 0px;
-}
-
-20%{
-
-
-    border-top-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-
-}
-
-60%{
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-
-
-
-}
-80%{
-
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-
-
-
-}
-100%{
-
-
-    opacity: 1;
-    border-top-right-radius: 40px;
-    border-bottom-left-radius: 40px;
-}
-
-
-
-
-}
-
-.right-conteiner{
-
+.for-login{
+margin-bottom: 150px;
 display: flex;
 justify-content: center;
 align-items: center;
-width: 40%;
-height: 100%;
-background-color: #f7e01d;
-
-
+height: 30px;
+background-color: bisque;
 }
 
-section{
-height: 360px;
-width: 300px;
-    background-color: white;
-    border-radius: 30px;
+.section-log{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    height: 500px;
 }
 
-/* 
-
- .subCont1{
+.center-login{
   
-    background-color: blueviolet;
-    position:absolute;
-    left:-20%;
-    top:0;
-
-    width:70%;
-    height:100%;
-    transform: skew(-20deg); 
-
-    border:2px solid yellow;
+    
+  padding: 0 4px;
+    height: 100%;
+    width: 50%;
+    background-color: aqua;
 }
 
-.subCont2{    
-  
-      width:50%;
-      height:100%;
 
-      border:2px solid grey;
+#email{
 
-      z-index:1000;
+margin-bottom: 30px;
+height: 30px;
+width: 100%;
+}
 
-      overflow:hidden;
-  }  */
+#password{
+
+    height: 30px;
+    width: 80%;
+}
+
+.enjoy{
+    display: flex;
+justify-content: center;
+align-items: center;
+
+height: 40px;
+width: 100%;
+background-color: blueviolet;
+
+}
