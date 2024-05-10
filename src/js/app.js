@@ -76,7 +76,7 @@ function showInfo() {
 
 
             <td>
-                <button class="btn btn-success" onclick="readInfo('${element.picture}', '${element.employeeName}', '${element.employeeCity}', '${element.employeeEmail}' data-bs-toggle="modal" data-bs-target="#readData"><i class="bi bi-eye"></i></button>
+              
 
                 <button class="btn btn-primary" onclick="editInfo(${index}, '${element.picture}', '${element.employeeName}', '${element.employeeCity}', '${element.employeeEmail}')" data-bs-toggle="modal" data-bs-target="#userForm"><i class="bi bi-pencil-square"></i></button>
 

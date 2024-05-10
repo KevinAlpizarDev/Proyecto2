@@ -1,3 +1,83 @@
+
+body{
+padding: 5px;
+background-color: black;
+
+}
+
+
+
+
+:root {
+    --color-primario: #FFA500;
+    --tamano-fuente-titulo: 24px;
+  }
+
+
+
+/* 
+  .titulo {
+    font-size: var(--tamano-fuente-titulo);
+  }
+  
+  .subtitulo {
+    font-size: var(--tamano-fuente-subtitulo);
+  } */
+
+
+nav{
+    display: flex;
+    
+    align-items: center;
+background-color: #262829 ;
+
+justify-content: space-between;
+}
+
+h1{
+color: rgb(172, 224, 245);
+    font-family: "Poetsen One", sans-serif;
+    margin-left: 8px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+}
+
+#logout{
+    height:30px;
+    width: 200px;
+    color: #FFFFFF;
+    background-color: #FFA500;
+
+}
+
+#logout:hover{
+    
+    color: #000000;
+    background-color: #FFA500;
+
+}
+
+.name-app{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+height: 100%;
+width: 50%;
+background-color: red;
+
+
+}
+ .quit{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    background-color: red;
+    
+} 
+
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -6,117 +86,69 @@ table {
   
   td, th {
     border: 1px solid #dddddd;
-    text-align: left;
+    text-align: center;
     padding: 8px;
   }
   
   tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: #72f7bf;
   }
 
 
 
-
-
-
-/* table tr td{
-    vertical-align: middle;
-}
-
-td button{
-    margin: 5px;
-}
-
-td button i{
-    font-size: 20px;
-}
-
-
-.modal-header{
-    background: #0d6efd;
-    color: #fff;
-}
-
-.modal-body form {
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto ;
+    background-color: #ffffff;
+    padding: 9px;
+  }
+  .grid-item-1 {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 0;
-}
+    justify-content: center;
+    align-items: start;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
 
-.modal-body form .imgholder{
-    width: 200px;
-    height: 200px;
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-}
 
-.imgholder .upload{
-    position: absolute;
-    bottom: 0;
-    left: 10;
-    width: 100%;
-    height: 100px;
-    background: rgba(0,0,0,0.3);
-    display: none;
+  /* ESTILO BOTON NEW PHOTO */
+  .new-photo{
+    display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
-}
+    margin-top: 60px;
+    border-radius: 4px;
+    height: 65px;
+    width: 45px;
+    background-color: white;
+  }
 
-.upload i{
-    color: #fff;
-    font-size: 35px;
-}
+  .grid-item-2 {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    height: 14.5em;
+    line-height: 1em;
+    overflow-x: hidden;
+    overflow-y: scroll;
+   
+    border: 1px solid;
+  }
 
-.imgholder:hover .upload{
+  footer{
+
+background-color: #2196F3;
     display: flex;
-}
-
-.imgholder .upload input{
-    display: none;
-}
-
-.modal-body form .inputField{
-    flex-basis: 68%;
-    border-left: 5px groove blue;
-    padding-left: 20px;
-}
-
-form .inputField > div{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
-}
+    justify-content: space-around;
+  }
 
-form .inputField > div label{
-    font-size: 20px;
-    font-weight: 500;
-}
+  h2{
+color: white;
 
-#userForm form .inputField > div label::after{
-    content: "*";
-    color: red;
-}
-
-form .inputField > div input{
-    width: 75%;
-    padding: 10px;
-    border: none;
-    outline: none;
-    background: transparent;
-    border-bottom: 2px solid blue;
-}
-
-.modal-footer .submit{
-    font-size: 18px;
-}
-
-
-#readData form .inputField > div input{
-    color: #000;
-    font-size: 18px;
-} */
+  }
