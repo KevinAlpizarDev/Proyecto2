@@ -1,5 +1,4 @@
 // LOGIN
-
 const user = JSON.parse(localStorage.getItem('login_success')) || false
 if (!user) {
     window.location.href = 'login.html'
@@ -12,10 +11,6 @@ logout.addEventListener('click', () => {
     localStorage.removeItem('login_success')
     window.location.href = 'login.html'
 })
-
-
-
-
 
 // MODAL KEVIN
 const modales = document.querySelector('.modales');
@@ -42,26 +37,25 @@ overlay.addEventListener('click', closeModal);
 document.addEventListener('keydown', function (e) {
     // console.log(e.key);
 
-    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+    if (e.key === 'Escape' && !modales.classList.contains('hidden')) {
         closeModal();
     }
 });
 // LOGICA PARA AGREGAR IMAGEN
 
+let form = document.getElementById("myForm")
+let   imgInput = document.querySelector(".img")
+let   file = document.getElementById("imgInput")
+let    userName = document.getElementById("name")
 
-var form = document.getElementById("myForm"),
-    imgInput = document.querySelector(".img"),
-    file = document.getElementById("imgInput"),
-    userName = document.getElementById("name"),
+let  city = document.getElementById("city")
+let    email = document.getElementById("email")
 
-    city = document.getElementById("city"),
-    email = document.getElementById("email"),
-
-    submitBtn = document.querySelector(".submit"),
-    userInfo = document.getElementById("data"),
-    modal = document.getElementById("userForm"),
-    modalTitle = document.querySelector("#userForm .modal-title"),
-    newUserBtn = document.querySelector(".show-modal")
+let   submitBtn = document.querySelector(".submit")
+let   userInfo = document.getElementById("data")
+let   modal = document.getElementById("userForm")
+let   modalTitle = document.querySelector("#userForm .modal-title")
+let    newUserBtn = document.querySelector(".show-modal")
 
 
 let getData = localStorage.getItem('userProfile') ? JSON.parse(localStorage.getItem('userProfile')) : []
@@ -93,7 +87,8 @@ function showInfo() {
     getData.forEach((element, index) => {
         let createElement = `<tr class="employeeDetails">
             <td>${index + 1}</td>
-            <td><img src="${element.picture}" alt="" width="50" height="50"></td>
+            
+            <td><img src="${element.picture}" onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" alt="" width="60" height="60"></td>
             <td>${element.employeeName}</td>
          
             <td>${element.employeeCity}</td>
@@ -126,7 +121,16 @@ function readInfo(pic, name, city, email) {
 
 }
 
-
+//TAMAÑO DE IMAGEN
+function bigImg(x) {
+    x.style.height = "150px";
+    x.style.width = "150px";
+  }
+  
+  function normalImg(x) {
+    x.style.height = "60px";
+    x.style.width = "60px";
+  }
 
 function deleteInfo(index) {
     if (confirm("Are you sure want to delete?")) {
@@ -159,8 +163,8 @@ form.addEventListener('submit', (e) => {
 
     localStorage.setItem('userProfile', JSON.stringify(getData))
 
-    submitBtn.innerText = "Submit"
-    modalTitle.innerHTML = "Fill The Form"
+    // submitBtn.innerText = "Submit"
+    // modalTitle.innerHTML = "Fill The Form"
 
     showInfo()
 
