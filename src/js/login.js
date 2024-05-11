@@ -15,5 +15,3 @@ loginForm.addEventListener('submit', (e) => { //EVENTO SUBMIT, FUNCION CALL BACK
 
 
 })
-
-
