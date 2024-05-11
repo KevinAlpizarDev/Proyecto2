@@ -1,18 +1,23 @@
+/* CERO MARGEN */
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: inherit;
   }
 
-
+/* SIGNUP TITTLE */
 
 .signup{
+    display: flex;
+    justify-content: start;
+    align-items: center;
 height: 70px;
 width: 100%;
 background-color: bisque;
-
 }
-
+/* HELLO TITTLE */
 .hello-friend{
     font-size: 30px;
     display: flex;
@@ -26,20 +31,97 @@ background-color: bisque;
 .seccion-signup{
 display: flex;
 justify-content: center;
-align-items: center;
+align-items: end;
     height: 300px;
     width: 100%;
     background-color: blue;
 }
+#signupForm{
+
+    width: 40%;
+    height: 80%;
+    background-color: aqua;
+}
+
+/* DIV INPUTS */
+.div-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    background-color: blueviolet;
+}
+/* 
+
+INPUTS STYLES */
+#name{
+
+width: 90%;
+height: 30px;
+
+}
+
+#email{
+    width: 90%;
+    height: 30px;
+}
+
+#password{
+    width: 60%;
+    height: 30px;
+}
+
+
+#registro{
+    width: 100%;
+    height: 20px;
+   background-color: black;
+   color: white;
+
+    }
+
+    #registro:hover{
+        background-color: white;
+        color: black;
+
+    }
+/* PLACEHOLDERS */
+
+#name::placeholder {
+    font-size: large;
+    color: red;
+    text-align: center;
+    padding-top: 30px;
+  }
+
+  #email::placeholder {
+    font-size: large;
+    color: red;
+    text-align: center;
+    padding-top: 30px;
+  }
+  
+  #password::placeholder {
+    font-size: large;
+    color: red;
+    text-align: center;
+    padding-top: 30px;
+  }
+  
+/* FOOTER SIGNP STYLE */
+
 footer{
 
    
     height: 160px;
     width: 100%;
+margin-top: 40px;
    
-    background-color: antiquewhite;
+    background-color: rgb(212, 151, 71);
 
 }
+
 
 
 .footer-conteiner{
