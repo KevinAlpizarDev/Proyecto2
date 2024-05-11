@@ -69,13 +69,6 @@ let getData = localStorage.getItem('userProfile') ? JSON.parse(localStorage.getI
 let isEdit = false, editId
 showInfo()
 
-// newUserBtn.addEventListener('click', () => {
-//     submitBtn.innerText = 'Submit',
-//         modalTitle.innerText = "Fill the Form"
-//     isEdit = false
-//     imgInput.src = "./img/album.svg"
-//     form.reset()
-// })
 
 
 file.onchange = function () {
@@ -134,20 +127,6 @@ function readInfo(pic, name, city, email) {
 }
 
 
-// function editInfo(index, pic, name, City, Email) {
-//     isEdit = true
-//     editId = index
-//     imgInput.src = pic
-//     userName.value = name
-
-//     city.value = City
-//     email.value = Email,
-
-
-//         submitBtn.innerText = "Update"
-//     modalTitle.innerText = "Update The Form"
-// }
-
 
 function deleteInfo(index) {
     if (confirm("Are you sure want to delete?")) {
@@ -162,7 +141,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault()
 
     const information = {
-        picture: imgInput.src == undefined ? "./img/album.svg" : imgInput.src,
+        picture: imgInput.src == undefined ? "/src/img/album-icon.svg" : imgInput.src,
         employeeName: userName.value,
 
         employeeCity: city.value,
@@ -187,8 +166,7 @@ form.addEventListener('submit', (e) => {
 
     form.reset()
 
-    imgInput.src = "./img/album.svg"
+    imgInput.src = "/src/img/album-icon.svg"
 
-    // modal.style.display = "none"
-    // document.querySelector(".modal-backdrop").remove()
+
 })
