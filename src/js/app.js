@@ -11,12 +11,11 @@ logout.addEventListener('click', () => {
     localStorage.removeItem('login_success')
     window.location.href = 'login.html'
 })
-
 // MODAL KEVIN
 const modales = document.querySelector('.modales');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.close-modales');
-const btnsOpenModal = document.querySelectorAll('.show-modales');
+const btnShowModal = document.querySelector('.show-modales'); // Botón específico
 
 const openModal = function () {
     modales.classList.remove('hidden');
@@ -28,8 +27,10 @@ const closeModal = function () {
     overlay.classList.add('hidden');
 };
 
-for (let i = 0; i < btnsOpenModal.length; i++)
-    btnsOpenModal[i].addEventListener('click', openModal);
+// Event listener solo para el botón específico
+btnShowModal.addEventListener('click', function () {
+    openModal(); // Llama a la función openModal cuando se hace clic en el botón
+});
 
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
@@ -41,21 +42,22 @@ document.addEventListener('keydown', function (e) {
         closeModal();
     }
 });
+
 // LOGICA PARA AGREGAR IMAGEN
 
 let form = document.getElementById("myForm")
-let   imgInput = document.querySelector(".img")
-let   file = document.getElementById("imgInput")
-let    userName = document.getElementById("name")
+let imgInput = document.querySelector(".img")
+let file = document.getElementById("imgInput")
+let userName = document.getElementById("name")
 
-let  city = document.getElementById("city")
-let    email = document.getElementById("email")
+let city = document.getElementById("city")
+let email = document.getElementById("email")
 
-let   submitBtn = document.querySelector(".submit")
-let   userInfo = document.getElementById("data")
-let   modal = document.getElementById("userForm")
-let   modalTitle = document.querySelector("#userForm .modal-title")
-let    newUserBtn = document.querySelector(".show-modal")
+let submitBtn = document.querySelector(".submit")
+let userInfo = document.getElementById("data")
+let modal = document.getElementById("userForm")
+let modalTitle = document.querySelector("#userForm .modal-title")
+let newUserBtn = document.querySelector(".show-modal")
 
 
 let getData = localStorage.getItem('userProfile') ? JSON.parse(localStorage.getItem('userProfile')) : []
@@ -81,34 +83,25 @@ file.onchange = function () {
     }
 }
 
-
 function showInfo() {
-    document.querySelectorAll('.employeeDetails').forEach(info => info.remove())
+    document.querySelectorAll('.employeeDetails').forEach(info => info.remove());
     getData.forEach((element, index) => {
         let createElement = `<tr class="employeeDetails">
             <td>${index + 1}</td>
-            
-            <td><img src="${element.picture}" onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" alt="" width="60" height="60"></td>
+            <td><img src="${element.picture}" onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" alt="" width="40" height="40"></td>
             <td>${element.employeeName}</td>
-         
             <td>${element.employeeCity}</td>
             <td>${element.employeeEmail}</td>
-     
-
-
             <td>
-          
-
-    
-
-                <button class="delete-boton" onclick="deleteInfo(${index})"></button>
-                            
+                <button class="delete-boton" onclick="deleteInfo(${index})">x</button>
             </td>
-        </tr>`
+        </tr>`;
 
-        userInfo.innerHTML += createElement
-    })
+        // Insertar el nuevo elemento al principio de la tabla
+        userInfo.insertAdjacentHTML('afterbegin', createElement);
+    });
 }
+
 showInfo()
 
 
@@ -125,12 +118,12 @@ function readInfo(pic, name, city, email) {
 function bigImg(x) {
     x.style.height = "150px";
     x.style.width = "150px";
-  }
-  
-  function normalImg(x) {
-    x.style.height = "60px";
-    x.style.width = "60px";
-  }
+}
+
+function normalImg(x) {
+    x.style.height = "40px";
+    x.style.width = "40px";
+}
 
 function deleteInfo(index) {
     if (confirm("Are you sure want to delete?")) {
