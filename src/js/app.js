@@ -1,19 +1,52 @@
-const user = JSON.parse(localStorage.getItem('login_success')) || false //SI EXISTE UN USUARIO 
-if (!user) { //SI NO SE LOGEA
-    window.location.href = 'login.html' //ESTANDO EN LOGIN LO DIRIGE A LOGIN
+// LOGIN
+
+const user = JSON.parse(localStorage.getItem('login_success')) || false
+if (!user) {
+    window.location.href = 'login.html'
 }
 
-const logout = document.querySelector('#logout')//TOMAMOS EL ID DEL OTON LOGOUT
+const logout = document.querySelector('#logout')
 
-logout.addEventListener('click', () => { //EVENTO CLICK DE DICHO BOTON 
+logout.addEventListener('click', () => {
     alert('Hasta pronto!')
-    localStorage.removeItem('login_success') //TERMINA LA SESIÓN 
-    window.location.href = 'login.html' //REDIRECCION AL LOGIN
+    localStorage.removeItem('login_success')
+    window.location.href = 'login.html'
 })
 
 
-//LOGICA CODIGO PATITO
 
+
+
+// MODAL KEVIN
+const modales = document.querySelector('.modales');
+const overlay = document.querySelector('.overlay');
+const btnCloseModal = document.querySelector('.close-modales');
+const btnsOpenModal = document.querySelectorAll('.show-modales');
+
+const openModal = function () {
+    modales.classList.remove('hidden');
+    overlay.classList.remove('hidden');
+};
+
+const closeModal = function () {
+    modales.classList.add('hidden');
+    overlay.classList.add('hidden');
+};
+
+for (let i = 0; i < btnsOpenModal.length; i++)
+    btnsOpenModal[i].addEventListener('click', openModal);
+
+btnCloseModal.addEventListener('click', closeModal);
+overlay.addEventListener('click', closeModal);
+
+document.addEventListener('keydown', function (e) {
+    // console.log(e.key);
+
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        closeModal();
+    }
+});
+// LOGICA PARA AGREGAR IMAGEN
 
 
 var form = document.getElementById("myForm"),
@@ -28,7 +61,7 @@ var form = document.getElementById("myForm"),
     userInfo = document.getElementById("data"),
     modal = document.getElementById("userForm"),
     modalTitle = document.querySelector("#userForm .modal-title"),
-    newUserBtn = document.querySelector(".newUser")
+    newUserBtn = document.querySelector(".show-modal")
 
 
 let getData = localStorage.getItem('userProfile') ? JSON.parse(localStorage.getItem('userProfile')) : []
@@ -36,13 +69,13 @@ let getData = localStorage.getItem('userProfile') ? JSON.parse(localStorage.getI
 let isEdit = false, editId
 showInfo()
 
-newUserBtn.addEventListener('click', () => {
-    submitBtn.innerText = 'Submit',
-        modalTitle.innerText = "Fill the Form"
-    isEdit = false
-    imgInput.src = ""
-    form.reset()
-})
+// newUserBtn.addEventListener('click', () => {
+//     submitBtn.innerText = 'Submit',
+//         modalTitle.innerText = "Fill the Form"
+//     isEdit = false
+//     imgInput.src = "./img/album.svg"
+//     form.reset()
+// })
 
 
 file.onchange = function () {
@@ -69,15 +102,18 @@ function showInfo() {
             <td>${index + 1}</td>
             <td><img src="${element.picture}" alt="" width="50" height="50"></td>
             <td>${element.employeeName}</td>
-            <td>${element.employeeEmail}</td>
+         
             <td>${element.employeeCity}</td>
+            <td>${element.employeeEmail}</td>
+     
+
 
             <td>
-              
+          
 
-                <button class="btn btn-primary" onclick="editInfo(${index}, '${element.picture}', '${element.employeeName}', '${element.employeeCity}', '${element.employeeEmail}')" data-bs-toggle="modal" data-bs-target="#userForm"><i class="bi bi-pencil-square"></i></button>
+    
 
-                <button class="btn btn-danger" onclick="deleteInfo(${index})"><i class="bi bi-trash"></i></button>
+                <button class="delete-boton" onclick="deleteInfo(${index})"></button>
                             
             </td>
         </tr>`
@@ -98,19 +134,19 @@ function readInfo(pic, name, city, email) {
 }
 
 
-function editInfo(index, pic, name, City, Email) {
-    isEdit = true
-    editId = index
-    imgInput.src = pic
-    userName.value = name
+// function editInfo(index, pic, name, City, Email) {
+//     isEdit = true
+//     editId = index
+//     imgInput.src = pic
+//     userName.value = name
 
-    city.value = City
-    email.value = Email,
+//     city.value = City
+//     email.value = Email,
 
 
-        submitBtn.innerText = "Update"
-    modalTitle.innerText = "Update The Form"
-}
+//         submitBtn.innerText = "Update"
+//     modalTitle.innerText = "Update The Form"
+// }
 
 
 function deleteInfo(index) {
@@ -126,7 +162,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault()
 
     const information = {
-        picture: imgInput.src == undefined ? "./src/img/album-icon.svg" : imgInput.src,
+        picture: imgInput.src == undefined ? "./img/album.svg" : imgInput.src,
         employeeName: userName.value,
 
         employeeCity: city.value,
@@ -151,45 +187,8 @@ form.addEventListener('submit', (e) => {
 
     form.reset()
 
-    imgInput.src = "./src/img/album-icon.svg"
+    imgInput.src = "./img/album.svg"
 
-    modal.style.display = "none"
-    document.querySelector(".modal-backdrop").remove()
+    // modal.style.display = "none"
+    // document.querySelector(".modal-backdrop").remove()
 })
-
-
-
-
-
-
-
-///////////////////////////////////////////////////////
-
-const modal = document.querySelector('.modal');
-const overlay = document.querySelector('.overlay');
-const btnCloseModal = document.querySelector('.close-modal');
-const btnsOpenModal = document.querySelectorAll('.show-modal');
-
-const openModal = function () {
-    modal.classList.remove('hidden');
-    overlay.classList.remove('hidden');
-};
-
-const closeModal = function () {
-    modal.classList.add('hidden');
-    overlay.classList.add('hidden');
-};
-
-for (let i = 0; i < btnsOpenModal.length; i++)
-    btnsOpenModal[i].addEventListener('click', openModal);
-
-btnCloseModal.addEventListener('click', closeModal);
-overlay.addEventListener('click', closeModal);
-
-document.addEventListener('keydown', function (e) {
-    // console.log(e.key);
-
-    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-        closeModal();
-    }
-});
