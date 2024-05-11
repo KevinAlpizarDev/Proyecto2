@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+
+
+
+.signup{
+height: 70px;
+width: 100%;
+background-color: bisque;
+
+}
+
+.hello-friend{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    height: 40px;
+    width: 100%;
+}
+
+.seccion-signup{
+display: flex;
+justify-content: center;
+align-items: center;
+    height: 300px;
+    width: 100%;
+    background-color: blue;
+}
+footer{
+
+   
+    height: 160px;
+    width: 100%;
+   
+    background-color: antiquewhite;
+
+}
+
+
+.footer-conteiner{
+    font-size: 30px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+
+    background-color: brown;
+}
