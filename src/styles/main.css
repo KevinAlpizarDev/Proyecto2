@@ -37,31 +37,13 @@ html {
   text-align: center;
 width: 97%;
 overflow: scroll;
-scrollbar-color: red orange;
+
 scrollbar-width: thin;
 }
 
 /* SCROLL BAR */
 
 /* width */
-.grid-item-2::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-.grid-item-2::-webkit-scrollbar-track {
-  background: #f1f1f1; 
-}
- 
-/* Handle */
-.grid-item-2::-webkit-scrollbar-thumb {
-  background: #888; 
-}
-
-/* Handle on hover */
-.grid-item-2::-webkit-scrollbar-thumb:hover {
-  background: #555; 
-}
 
 /* MODAL STYLE */
 .show-modales {
@@ -110,7 +92,7 @@ p {
   width: 70%;
 
   background-color: white;
-  padding: 6rem;
+  /* padding: 6rem; */
   border-radius: 5px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
@@ -135,12 +117,17 @@ table {
 }
 
 th, td {
-  text-align: left;
+
+  text-align: center;
   padding: 7px;
 }
 
 tr:nth-child(even) {
+  max-height: 40px;
   background-color: #D6EEEE;
+
+ 
+  z-index: 5;
 }
 /* 
 BOTON */
