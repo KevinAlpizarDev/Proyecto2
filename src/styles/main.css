@@ -10,8 +10,62 @@ html {
 }
 
 
+/* GRID STYLE */
+
+.grid-container {
+  height: 500px;
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: #2196F3;
+  /* padding: 10px; */
+}
+/* IZQUIERDO */
+.grid-item-1{
+  background-color: rgba(114, 74, 74, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+ 
+  font-size: 30px;
+  text-align: center;
+  width: 60%;
+}
+/* DERECHO */
+.grid-item-2{
+  background-color: rgba(114, 74, 74, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+
+  font-size: 30px;
+  text-align: center;
+width: 97%;
+overflow: scroll;
+scrollbar-color: red orange;
+scrollbar-width: thin;
+}
+
+/* SCROLL BAR */
+
+/* width */
+.grid-item-2::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.grid-item-2::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+.grid-item-2::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+.grid-item-2::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+/* MODAL STYLE */
 .show-modales {
-  font-size: 2rem;
+  /* font-size: 2rem;
   font-weight: 600;
   padding: 1.75rem 3.5rem;
   margin: 5rem 2rem;
@@ -19,18 +73,18 @@ html {
   background-color: #f9b8b8;
   color: #444;
   border-radius: 10rem;
-  cursor: pointer;
+  cursor: pointer; */
 }
 
 .close-modales {
-  position: absolute;
+  /* position: absolute;
   top: 1.2rem;
   right: 2rem;
   font-size: 5rem;
   color: #333;
   cursor: pointer;
   border: none;
-  background: none;
+  background: none; */
 }
 
 h1 {
@@ -82,7 +136,7 @@ table {
 
 th, td {
   text-align: left;
-  padding: 8px;
+  padding: 7px;
 }
 
 tr:nth-child(even) {
