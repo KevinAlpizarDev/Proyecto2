@@ -5,7 +5,12 @@
 
   }
 
+body{
 
+
+   background-color: #cde5ef;
+
+}
   :root {
     --blanco: white ;
   }
@@ -17,16 +22,22 @@
 font-size: 50px;
     width: 100%;
     height: 100px;
-background-color: var(--blanco);
+/* background-color: var(--blanco); */
+background-color: transparent;
 }
 
 .landing-page > h1{
-    font-size: 80PX;
+    font-size: 60px;
     margin-left: 30px;
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
+
+.landing-page > h1 span{
+color: #fcc42c;
+}
+
 
 .landing-frase{
     display: flex;
@@ -46,7 +57,9 @@ height: 50px;
 .user-login{
     height: 30px;
     width: 100%;
-    background-color: var(--blanco);
+    /* background-color: var(--blanco); */
+     
+background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,8 +67,14 @@ height: 50px;
     font-family: "Poppins", sans-serif;
     font-weight: 100;
     font-style: normal;
-    font-size: 50px;
+    font-size: 30px;
 }
+
+.user-login h2 span {
+    color: rgb(28, 125, 185); /* Cambia el color según tus preferencias */
+    font-weight: bold; /* Otras propiedades de estilo que desees aplicar */
+    /* Puedes agregar más estilos según necesites */
+  }
 
 #loginForm{
 display: flex;
@@ -63,7 +82,8 @@ justify-content: center;
 align-items: start;
     height: 400px;
     width: 100%;
-    background-color: var(--blanco);
+    /* background-color: var(--blanco); */
+  background-color: transparent;
 }
 .manager{
 border: 1px solid gray;
@@ -74,18 +94,24 @@ border-radius: 3px;
     height: 90%;
     width: 36%;
     background-color: var(--blanco);
+    /* background-image: url("../img/opcion2.jpg");
+background-size: cover;
+background-repeat: no-repeat; */
 }
+.user-login h2 span {
+ 
+  
+    font-weight: bold; /* Otras propiedades de estilo que desees aplicar */
+    /* Puedes agregar más estilos según necesites */
+  }
 
 .input-contain{
-    background-color: var(--blanco);
-width: 100% ;
+    /* background-color: var(--blanco); */
+
+background-color: transparent;
+    width: 100% ;
 }
 
-.contain{
-
-  
-
-}
 
 .input-label{
 
@@ -101,7 +127,9 @@ padding-left: 40px;
     align-items: center;
     height: 30px;
     width: 100%;
-    background-color: var(--blanco);
+   
+background-color: transparent;
+    /* background-color: var(--blanco); */
 }
 
 
@@ -111,6 +139,7 @@ padding-left: 40px;
     justify-content: center;
     width: 100%;
     height:100% ;
+    
 }
 
 
@@ -120,23 +149,31 @@ padding-left: 40px;
     align-items: center;
     width: 100%;
     height: 60px;
-    background-color: var(--blanco);
+    /* background-color: var(--blanco); */
+       
+background-color: transparent;
 }
 
 .input-enjoy{
+    font-size: 15px;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-style: normal;
-    background-color: #296ec6;
+    background-color: #a32cb5;
+    
+    
     height: 40px;
 width: 74%;
 border-radius: 5px;
 color: white;
 margin-top: 15px;
+transition: 0.2s;
+border:1px solid #a32cb5;
+transition: 0.2s;
 }
 .input-enjoy:hover{
     
-    background-color: #2663b3;
+    background-color:#8c1e96;
 
 }
 
@@ -151,15 +188,50 @@ color: blue;
 height: 40px;
 width: 75%;
 border-radius: 3px;
+border:1px solid black;
+padding: 2px;
+padding-left: 20px;
+  
+  
 
 }
+
+#email::placeholder {
+     font-size:15px;
+   color: gray;
+
+    padding-top: 30px; 
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    
+ 
+    
+  }
+
 
 #password{
     height: 40px;
     width: 75%;
     border-radius: 3px;
-
+    border:1px solid black;
+    padding: 2px;
+padding-left: 20px;
+  
 }
+#password::placeholder {
+    font-size:15px;
+    color: gray;
+ 
+     padding-top: 30px; 
+     font-family: "Poppins", sans-serif;
+     font-weight: 500;
+     font-style: normal;
+   
+
+   
+ }
+
 
 .parrafo-registro{
     display: flex;
@@ -167,7 +239,9 @@ border-radius: 3px;
     align-items: center;
     height: 30px;
     width: 100%;
-    background-color: var(--blanco);
+    /* background-color: var(--blanco); */
+       
+background-color: transparent;
 
 }
 .parrafo-registro p{
@@ -189,39 +263,3 @@ border-radius: 3px;
    
     text-decoration: underline;
 }
-/* .parrafo-registro a {
-color: wheat;
-font-size: large;
-animation-name: registroIntermitente;
-animation-duration: 4s;
-transition: transform 0.5s ease-out
-} */
-/* 
-@keyframes registroIntermitente{
-
-    0%{
-opacity: 0;
-
-    }
-    
-    20%{
-        
-    }
-    
-    40%{
-        
-    }
-    
-    60%{
-        
-    }
-    
-    80%{
-        
-    }
-    
-    100%{
-        font-size: 30px;
-    }
-
-} */
