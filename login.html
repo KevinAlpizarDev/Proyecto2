@@ -9,10 +9,16 @@
 </head>
 
 <body>
-<div>
+<div class="landing-page">
     <h1>Landing Page</h1>
 </div>
-    <h2>Login</h2>
+<div class="landing-frase">
+    <p>Capture your daily moments of work and study! Keep track <br> of your progress with our daily photo gallery.</p>
+</div>
+<div class="user-login">
+
+    <h2>User Login</h2>
+</div>
 
     <!-- FORMULARIO DEL LOGIN -->
     <form id="loginForm">
@@ -21,32 +27,55 @@
 
         <div class="manager">
 
+<div class="input-contain">
+
+
 
 
             <div class="contain">
-                <!-- <label>Mail</label> -->
-                <input type="email" placeholder="EMAIL HERE" id="email" required autofocus>
+                <div class="input-label">
+
+
+                    <label>Mail</label>
+                </div>
+                <div class="input-login">
+
+                    <input type="email" placeholder="EMAIL HERE" id="email" required autofocus>
+                </div>
             </div>
 
             <div class="contain">
-                <!-- <label>Contraseña</label> -->
-                <input type="password" placeholder="PASSWORD HERE" id="password" required>
+                <div class="input-label">
+
+                    <label>Contraseña</label>
+                </div>
+
+                <div class="input-login">
+                    <input type="password" placeholder="PASSWORD HERE" id="password" required>
+             
+                </div>
 
             </div>
 
             <div class="enjoy">
 
-
-                <input type="submit" value="Enjoy">
+               
+                <input class="input-enjoy" type="submit" value="Enjoy">
 
             </div>
 
+        </div>
 
         </div>
 
     </form>
     <!-- PARRAFO TIPO LINK -->
-    <p>No tienes una cuenta? <a href="signup.html">Registro</a></p>
+<div class="parrafo-registro">
+
+
+    <p>No tienes una cuenta? <a href='signup.html'>¡Sign up!</a></p>
+</div>
+
     <script src="/src/js/login.js"></script>
 </body>
 

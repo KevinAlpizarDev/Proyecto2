@@ -13,17 +13,19 @@
     display: flex;
     justify-content: start;
     align-items: center;
+    color: aliceblue;
 height: 70px;
 width: 100%;
-background-color: bisque;
+background-color: #004aad;
 }
 /* HELLO TITTLE */
 .hello-friend{
+    color: white;
     font-size: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
+    background-color: #004aad;
     height: 40px;
     width: 100%;
 }
@@ -34,13 +36,13 @@ justify-content: center;
 align-items: end;
     height: 300px;
     width: 100%;
-    background-color: blue;
+    background-color:#004aad;
 }
 #signupForm{
 
     width: 40%;
     height: 80%;
-    background-color: aqua;
+    background-color:#004aad;
 }
 
 /* DIV INPUTS */
@@ -50,7 +52,7 @@ align-items: end;
     align-items: center;
     height: 40px;
     width: 100%;
-    background-color: blueviolet;
+    background-color:#004aad;
 }
 /* 
 
@@ -113,12 +115,12 @@ height: 30px;
 
 footer{
 
-   
+   color: white;
     height: 160px;
     width: 100%;
 margin-top: 40px;
    
-    background-color: rgb(212, 151, 71);
+    background-color:#004aad;
 
 }
 
@@ -132,5 +134,5 @@ margin-top: 40px;
     height: 100%;
     width: 90%;
 
-    background-color: brown;
+    background-color:#004aad;
 }

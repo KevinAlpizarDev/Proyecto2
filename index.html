@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <h1>HOME</h1>
+    <h1>HOM</h1>
 
     <!-- GRID DIVS -->
 
@@ -22,25 +22,20 @@
 
 
             <!-- MODAL CSS -->
-            <button class="show-modales">Show modal 3</button>
+            <button class="show-modales"> <img src="./src/img/card.svg" alt=""> </button>
 
             <div id="userForm" class="modales hidden">
 
-                <!-- <button class="close-modales">&times;</button> -->
-                <h1>I'm a modal window </h1>
-                <p>Inicio</p>
+            
+                <!-- <h1>I'm a modal window </h1>
+               -->
                 <div class="modal-content">
-
-                    <!-- <div class="modal-header">
-                        <h4 class="modal-title">Fill the Form</h4>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div> -->
 
                     <div class="modal-body">
 
                         <form action="#" id="myForm">
 
-                            <div class="card imgholder">
+                            <!-- <div class="card imgholder">
                                 <label for="imgInput" class="upload">
                                     <input type="file" name="" id="imgInput">
                                     <i class="bi bi-plus-circle-dotted"></i>
@@ -48,7 +43,16 @@
                                 <img src="/src/img/album-icon.svg" width="200" height="200" class="img" alt="">
 
 
-                            </div>
+                            </div> -->
+                            <div class="card imgholder">
+    <label for="imgInput" class="upload">
+        <input type="file" name="" id="imgInput">
+        <i class="bi bi-plus-circle-dotted"></i>
+        <div class="image-preview"></div> <!-- Nuevo elemento para mostrar la imagen -->
+    </label>
+    <img src="/src/img/album-icon.svg" width="200" height="200" class="img" alt="">
+</div>
+
 
                             <div class="inputField">
                                 <div>
@@ -57,7 +61,8 @@
                                 </div>
 
                                 <div>
-                                    <label for="city">City:</label>
+
+                                    <label for="city">Description</label>
                                     <input type="text" name="" id="city" required>
                                 </div>
                                 <div>
@@ -73,12 +78,12 @@
                     </div>
 
                     <div class="modal-footer">
-                        <button class="close-modales">x</button>
-                        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                        <button class="close-modales">close</button>
+
                         <button type="submit" form="myForm" class="btn btn-primary submit">Submit</button>
                     </div>
                 </div>
-                <p>Fin</p>
+               
             </div>
             <div class="overlay hidden"></div>
 
@@ -105,8 +110,8 @@
                     <th>#</th>
                     <th>Picture</th>
                     <th>Name</th>
-                    <th>Email</th>
                     <th>Description</th>
+                    <th>email</th>
 
 
 
@@ -164,7 +169,7 @@
 
     </section>
     <footer>
-
+        <h4>hola</h4>
         <h2>LOGOUT</h2>
         <button id="logout">Logout</button>
     </footer>
