@@ -9,19 +9,24 @@ html {
   box-sizing: border-box;
 }
 
-
+body{
+  background-color: black;
+}
+h1{
+  color: white;
+}
 /* GRID STYLE */
 
 .grid-container {
   height: 500px;
   display: grid;
   grid-template-columns: auto auto;
-  background-color: #2196F3;
+  background-color:#004aad;
   /* padding: 10px; */
 }
 /* IZQUIERDO */
 .grid-item-1{
-  background-color: rgba(114, 74, 74, 0.8);
+  background-color: #004aad;
   border: 1px solid rgba(0, 0, 0, 0.8);
  
   font-size: 30px;
@@ -30,7 +35,7 @@ html {
 }
 /* DERECHO */
 .grid-item-2{
-  background-color: rgba(114, 74, 74, 0.8);
+  background-color:#004aad;
   border: 1px solid rgba(0, 0, 0, 0.8);
 
   font-size: 30px;
@@ -97,6 +102,7 @@ TABLA STYLING */
 table {
   border-collapse: collapse;
   width: 100%;
+ 
 }
 
 th, td {
