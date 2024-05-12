@@ -212,3 +212,23 @@ background-color: transparent;
 /* 
     background-color: var(--blanco); */
 }
+.footer-conteiner h3{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+
+}
+
+.footer-conteiner p{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+
+}
+.piepagina{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
