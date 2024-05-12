@@ -86,7 +86,7 @@ function showInfo() {
         let createElement = `<tr class="employeeDetails">
             <td>${index + 1}</td>
             <td><img src="${element.picture}" onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" alt="" width="40" height="40"></td>
-            <td>${element.employeeName}</td>
+            <td name-row">${element.employeeName}</td>
             <td>${element.employeeCity}</td>
             <td>${element.employeeEmail}</td>
             <td>
