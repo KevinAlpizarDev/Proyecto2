@@ -189,8 +189,9 @@ transition: 0.2s;
 
 footer{
 
-   color: white;
-    height: 160px;
+   /* color: white; */
+    /* height: 160px; */
+    height: 83px;
     width: 100%;
 margin-top: 20px;
    
@@ -219,6 +220,19 @@ background-color: transparent;
 
 
 }
+
+.footer-conteiner a{
+font-size: 50px;
+color: rgb(226, 43, 156);
+text-decoration: none;
+}
+
+.footer-conteiner a:hover{
+    font-size: 50px;
+    color: rgb(226, 43, 156);
+    text-decoration: underline;
+    }
+    
 
 .footer-conteiner p{
     font-family: "Bebas Neue", sans-serif;
