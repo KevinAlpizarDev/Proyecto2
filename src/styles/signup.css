@@ -187,18 +187,7 @@ transition: 0.2s;
   
 /* FOOTER SIGNP STYLE */
 
-footer{
 
-   /* color: white; */
-    /* height: 160px; */
-    height: 83px;
-    width: 100%;
-margin-top: 20px;
-   
-/* background-color: var(--blanco); */
-background-color: transparent;
-
-}
 
 
 
@@ -246,3 +235,4 @@ text-decoration: none;
     font-weight: 400;
     font-style: normal;
 }
+
