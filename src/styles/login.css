@@ -36,6 +36,7 @@ background-color: transparent;
 
 .landing-page > h1 span{
 color: #fcc42c;
+font-size: 85px;
 }
 
 
@@ -68,7 +69,33 @@ background-color: transparent;
     font-weight: 100;
     font-style: normal;
     font-size: 30px;
+
+    animation-name: leftRight;
+    animation-duration: 3.5s;
 }
+
+@keyframes leftRight{
+
+    0% {
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+    80% {
+      transform: translateX(40px);
+      color: #ffffff;
+      opacity: 1;
+   
+
+    }
+    100% {
+     
+      transform: translateX(0);
+
+}
+
+
+}
+
 
 .user-login h2 span {
     color: rgb(28, 125, 185); /* Cambia el color según tus preferencias */
