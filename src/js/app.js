@@ -79,7 +79,7 @@ function showInfo() {
         </tr>`;
 
         // Insertar el nuevo elemento al final de la tabla
-        userInfo.insertAdjacentHTML('beforeend', createElement);
+        userInfo.insertAdjacentHTML('afterend', createElement);
     });
 }
 
@@ -137,3 +137,21 @@ form.addEventListener('submit', (e) => {
 
 // Mostrar la información inicial al cargar la página
 showInfo();
+
+
+
+// CAMBIAR EL TAMAÑO DE UNA IMAGEN 
+function bigImg(x) {
+
+    x.style.height = "150px"
+    x.style.weight = "150px"
+
+}
+
+function normalImg(x) {
+
+    x.style.height = "40px"
+    x.style.weight = "40px"
+
+
+}
