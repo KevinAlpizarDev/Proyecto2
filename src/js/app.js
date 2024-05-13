@@ -1,26 +1,27 @@
 // LOGIN
-const user = JSON.parse(localStorage.getItem('login_success')) || false  // Obtiene los usuarios del almacenamiento local
+const user = JSON.parse(localStorage.getItem('login_success')) || false; // Obtiene los usuarios del almacenamiento local
 if (!user) {
-    window.location.href = 'login.html'
+    window.location.href = 'login.html';
 }
 
 // EVENTO AL BOTON QUIT DE SALIDA
-const logout = document.querySelector('#logout')
+const logout = document.querySelector('#logout');
 
 logout.addEventListener('click', () => {
-    alert('See you!')
-    localStorage.removeItem('login_success')
-    window.location.href = 'login.html'
-})
+    alert('See you!');
+    localStorage.removeItem('login_success');
+    window.location.href = 'login.html';
+});
 
 // PARA EL MODAL SE SELECCIONA LOS ELEMENTO: MODALES, OVERLAY Y EL BOTON SHOWMODAL
+
 const modales = document.querySelector('.modales');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.close-modales');
 const btnShowModal = document.querySelector('.show-modales'); // BOTON QUE ABRE EL MODAL
 
-
 // MANIPULACION DE CLASES
+
 const openModal = function () {
     // SE HACE VISIBLE LA CLASE MODALES Y OVERLAY
     modales.classList.remove('hidden');
@@ -35,77 +36,38 @@ const closeModal = function () {
 };
 
 // ESCUCHA CLICK PARA EL BOTON MODAL
-btnShowModal.addEventListener('click', function () {
-    openModal(); //SE INVOCA LA FUNCNION OPENMMODAL CON EL CLICK DEL BOTON
-});
-
+btnShowModal.addEventListener('click', openModal);
 
 // ESCUCHA CLICK PARA EL BOTON CLOSE MODAL Y EL OVERLAY
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
 
 document.addEventListener('keydown', function (e) {
-    // console.log(e.key);
-
     if (e.key === 'Escape' && !modales.classList.contains('hidden')) {
         closeModal();
     }
 });
 
-
-//TAMAÑO DE IMAGEN
-function bigImg(x) {
-    x.style.height = "200px";
-    x.style.width = "200px";
-}
-
-function normalImg(x) {
-    x.style.height = "40px";
-    x.style.width = "40px";
-}
-
-
-
-
-
 // LOGICA PARA AGREGAR IMAGEN
 let emailFormularios; // Variable para almacenar el correo del formulario
 
-let form = document.getElementById("myForm");
-let imgInput = document.querySelector(".img");
-let file = document.getElementById("imgInput");
-let userName = document.getElementById("name");
-let city = document.getElementById("city");
-let email = document.getElementById("email");
+const form = document.getElementById("myForm");
+const imgInput = document.querySelector(".img");
+const file = document.getElementById("imgInput");
+const userName = document.getElementById("name");
+const city = document.getElementById("city");
+const email = document.getElementById("email");
+const userInfo = document.getElementById("data");
 
-let submitBtn = document.querySelector(".submit");
-let userInfo = document.getElementById("data");
-let modal = document.getElementById("userForm");
 let getData = localStorage.getItem('userProfile') ? JSON.parse(localStorage.getItem('userProfile')) : [];
 
 let isEdit = false, editId;
-showInfo();
 
-file.onchange = function () {
-    if (file.files[0].size < 1000000) {  // 1MB = 1000000
-        let fileReader = new FileReader(); //Objeto de JS, Funcion asincronica
-
-        fileReader.onload = function (e) {
-            imgUrl = e.target.result;
-            imgInput.src = imgUrl;
-        };
-
-        fileReader.readAsDataURL(file.files[0]);//LEE LOS ARCHIVOS EN BAE 64
-    }
-    else {
-        alert("This file is too large!");
-    }
-};
-
+// Función para mostrar la información en la tabla
 function showInfo() {
-    document.querySelectorAll('.personDetails').forEach(info => info.remove());
+    userInfo.innerHTML = ''; // Limpiar la tabla antes de agregar nuevas filas
     getData.forEach((element, index) => {
-        let createElement = `<tr class="Details">
+        const createElement = `<tr class="Details">
             <td>${index + 1}</td>
             <td><img src="${element.picture}" onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" alt="" width="40" height="40"></td>
             <td name-row">${element.employeeName}</td>
@@ -116,47 +78,49 @@ function showInfo() {
             </td>
         </tr>`;
 
-    
-        //INSERTAR EL NUEVO ELEMENTO AL PRINCIPAL DE LA TABLA 
-        userInfo.insertAdjacentHTML('afterbegin', createElement);
+        // Insertar el nuevo elemento al final de la tabla
+        userInfo.insertAdjacentHTML('beforeend', createElement);
     });
 }
 
-showInfo();
+// Función para cargar la imagen seleccionada
+file.onchange = function () {
+    if (file.files[0].size < 1000000) {  // 1MB = 1000000
+        const fileReader = new FileReader();
 
+        fileReader.onload = function (e) {
+            imgInput.src = e.target.result;
+        };
 
-// REUTILIZAMOS LA FUNCION
-function readInfo(pic, name, city, email) {
-    document.querySelector('.showImg').src = pic;
-    document.querySelector('#showName').value = name;
-    document.querySelector("#showCity").value = city;
-    document.querySelector("#showEmail").value = email;
-}
+        fileReader.readAsDataURL(file.files[0]);
+    } else {
+        alert("This file is too large!");
+    }
+};
 
-
-// DELETE FUNCTION
+// Función para eliminar una entrada de la tabla
 function deleteInfo(index) {
-    if (confirm("Are you sure?")) {
+    if (confirm("Are you sure want to delete?")) {
         getData.splice(index, 1);
         localStorage.setItem("userProfile", JSON.stringify(getData));
         showInfo();
     }
 }
 
+// Escuchar el envío del formulario
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const information = {
-        picture: imgInput.src == undefined ? "/src/img/album-icon.svg" : imgInput.src,
+        picture: imgInput.src || "/src/img/album-icon.svg", // Utiliza el operador de cortocircuito para manejar el caso en el que no haya una imagen seleccionada
         employeeName: userName.value,
         employeeCity: city.value,
         employeeEmail: email.value,
     };
 
- 
-    //CAPTURAR EL VALOR DEL CORREO DEL FORMULARIO EN LA VARIABLE EMAILFORMULARIOS
+    // Capturar el valor del correo del formulario en la variable emailFormularios
     emailFormularios = email.value;
-    console.log('Correo electrónico de los empleados:', emailFormularios); // Agregar console.log aquí
+    console.log('Correo electrónico de los empleados:', emailFormularios);
 
     if (!isEdit) {
         getData.push(information);
@@ -170,3 +134,6 @@ form.addEventListener('submit', (e) => {
     form.reset();
     imgInput.src = "/src/img/album-icon.svg";
 });
+
+// Mostrar la información inicial al cargar la página
+showInfo();
