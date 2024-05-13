@@ -1,13 +1,14 @@
 // LOGIN
-const user = JSON.parse(localStorage.getItem('login_success')) || false
+const user = JSON.parse(localStorage.getItem('login_success')) || false  // Obtiene los usuarios del almacenamiento local
 if (!user) {
     window.location.href = 'login.html'
 }
 
+// EVENTO AL BOTON QUIT DE SALIDA
 const logout = document.querySelector('#logout')
 
 logout.addEventListener('click', () => {
-    alert('Hasta pronto!')
+    alert('See you!')
     localStorage.removeItem('login_success')
     window.location.href = 'login.html'
 })
@@ -19,27 +20,37 @@ logout.addEventListener('click', () => {
 
 
 
-// MODAL KEVIN
+// PARA EL MODAL SE SELECCIONA LOS ELEMENTO: MODALES, OVERLAY Y EL BOTON SHOWMODAL
+
 const modales = document.querySelector('.modales');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.close-modales');
-const btnShowModal = document.querySelector('.show-modales'); // Botón específico
+const btnShowModal = document.querySelector('.show-modales'); // BOTON QUE ABRE EL MODAL
+
+
+
+// MANIPULACION DE CLASES
 
 const openModal = function () {
+    // SE HACE VISIBLE LA CLASE MODALES Y OVERLAY
     modales.classList.remove('hidden');
     overlay.classList.remove('hidden');
 };
 
+// BOTON SECUNDARIO PARA CERRAR EL MODAL
 const closeModal = function () {
+    // SE HACE INVISIBLE LA CLASE MODALES Y OVERLAY
     modales.classList.add('hidden');
     overlay.classList.add('hidden');
 };
 
-// Event listener solo para el botón específico
+// ESCUCHA CLICK PARA EL BOTON MODAL
 btnShowModal.addEventListener('click', function () {
-    openModal(); // Llama a la función openModal cuando se hace clic en el botón
+    openModal(); //SE INVOCA LA FUNCNION OPENMMODAL CON EL CLICK DEL BOTON
 });
 
+
+// ESCUCHA CLICK PARA EL BOTON CLOSE MODAL Y EL OVERLAY
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
 
@@ -64,8 +75,8 @@ let email = document.getElementById("email");
 let submitBtn = document.querySelector(".submit");
 let userInfo = document.getElementById("data");
 let modal = document.getElementById("userForm");
-let modalTitle = document.querySelector("#userForm .modal-title");
-let newUserBtn = document.querySelector(".show-modal");
+// let modalTitle = document.querySelector("#userForm .modal-title");
+// let newUserBtn = document.querySelector(".show-modal");
 
 let getData = localStorage.getItem('userProfile') ? JSON.parse(localStorage.getItem('userProfile')) : [];
 
