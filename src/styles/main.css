@@ -29,10 +29,9 @@ span{
 }
 
 
-/* GRID STYLE */
 
 .grid-container {
-  height: 500px;
+  height: 470px;
   display: grid;
   grid-template-columns: auto auto;
   background-color:#23262a;
