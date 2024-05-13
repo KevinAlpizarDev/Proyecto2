@@ -187,17 +187,7 @@ transition: 0.2s;
   
 /* FOOTER SIGNP STYLE */
 
-footer{
 
-   color: white;
-    height: 160px;
-    width: 100%;
-margin-top: 20px;
-   
-/* background-color: var(--blanco); */
-background-color: transparent;
-
-}
 
 
 
@@ -212,3 +202,37 @@ background-color: transparent;
 /* 
     background-color: var(--blanco); */
 }
+.footer-conteiner h3{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+
+}
+
+.footer-conteiner a{
+font-size: 50px;
+color: rgb(226, 43, 156);
+text-decoration: none;
+}
+
+.footer-conteiner a:hover{
+    font-size: 50px;
+    color: rgb(226, 43, 156);
+    text-decoration: underline;
+    }
+    
+
+.footer-conteiner p{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+
+}
+.piepagina{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
