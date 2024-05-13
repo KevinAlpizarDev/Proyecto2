@@ -62,6 +62,22 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
+
+//TAMAÑO DE IMAGEN
+function bigImg(x) {
+    x.style.height = "200px";
+    x.style.width = "200px";
+}
+
+function normalImg(x) {
+    x.style.height = "40px";
+    x.style.width = "40px";
+}
+
+
+
+
+
 // LOGICA PARA AGREGAR IMAGEN
 let emailFormularios; // Variable para almacenar el correo del formulario
 
@@ -75,9 +91,6 @@ let email = document.getElementById("email");
 let submitBtn = document.querySelector(".submit");
 let userInfo = document.getElementById("data");
 let modal = document.getElementById("userForm");
-// let modalTitle = document.querySelector("#userForm .modal-title");
-// let newUserBtn = document.querySelector(".show-modal");
-
 let getData = localStorage.getItem('userProfile') ? JSON.parse(localStorage.getItem('userProfile')) : [];
 
 let isEdit = false, editId;
@@ -85,14 +98,14 @@ showInfo();
 
 file.onchange = function () {
     if (file.files[0].size < 1000000) {  // 1MB = 1000000
-        let fileReader = new FileReader();
+        let fileReader = new FileReader(); //Objeto de JS, Funcion asincronica
 
         fileReader.onload = function (e) {
             imgUrl = e.target.result;
             imgInput.src = imgUrl;
         };
 
-        fileReader.readAsDataURL(file.files[0]);
+        fileReader.readAsDataURL(file.files[0]);//LEE LOS ARCHIVOS EN BAE 64
     }
     else {
         alert("This file is too large!");
@@ -125,17 +138,6 @@ function readInfo(pic, name, city, email) {
     document.querySelector('#showName').value = name;
     document.querySelector("#showCity").value = city;
     document.querySelector("#showEmail").value = email;
-}
-
-//TAMAÑO DE IMAGEN
-function bigImg(x) {
-    x.style.height = "200px";
-    x.style.width = "200px";
-}
-
-function normalImg(x) {
-    x.style.height = "40px";
-    x.style.width = "40px";
 }
 
 function deleteInfo(index) {
