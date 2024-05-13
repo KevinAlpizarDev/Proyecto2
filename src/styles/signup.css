@@ -28,6 +28,9 @@ font-family: "Bebas Neue", sans-serif;
 font-weight: 400;
 font-style: normal;
 }
+.signup h1{
+margin-left: 20px;
+}
 /* HELLO TITTLE */
 .hello-friend{
     color: white;
