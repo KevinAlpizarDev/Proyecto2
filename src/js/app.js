@@ -13,24 +13,14 @@ logout.addEventListener('click', () => {
     window.location.href = 'login.html'
 })
 
-
-
-
-
-
-
-
 // PARA EL MODAL SE SELECCIONA LOS ELEMENTO: MODALES, OVERLAY Y EL BOTON SHOWMODAL
-
 const modales = document.querySelector('.modales');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.close-modales');
 const btnShowModal = document.querySelector('.show-modales'); // BOTON QUE ABRE EL MODAL
 
 
-
 // MANIPULACION DE CLASES
-
 const openModal = function () {
     // SE HACE VISIBLE LA CLASE MODALES Y OVERLAY
     modales.classList.remove('hidden');
@@ -126,13 +116,16 @@ function showInfo() {
             </td>
         </tr>`;
 
-        // Insertar el nuevo elemento al principio de la tabla
+    
+        //INSERTAR EL NUEVO ELEMENTO AL PRINCIPAL DE LA TABLA 
         userInfo.insertAdjacentHTML('afterbegin', createElement);
     });
 }
 
 showInfo();
 
+
+// REUTILIZAMOS LA FUNCION
 function readInfo(pic, name, city, email) {
     document.querySelector('.showImg').src = pic;
     document.querySelector('#showName').value = name;
@@ -140,8 +133,10 @@ function readInfo(pic, name, city, email) {
     document.querySelector("#showEmail").value = email;
 }
 
+
+// DELETE FUNCTION
 function deleteInfo(index) {
-    if (confirm("Are you sure want to delete?")) {
+    if (confirm("Are you sure?")) {
         getData.splice(index, 1);
         localStorage.setItem("userProfile", JSON.stringify(getData));
         showInfo();
@@ -158,7 +153,8 @@ form.addEventListener('submit', (e) => {
         employeeEmail: email.value,
     };
 
-    // Capturar el valor del correo del formulario en la variable emailFormularios
+ 
+    //CAPTURAR EL VALOR DEL CORREO DEL FORMULARIO EN LA VARIABLE EMAILFORMULARIOS
     emailFormularios = email.value;
     console.log('Correo electrónico de los empleados:', emailFormularios); // Agregar console.log aquí
 
