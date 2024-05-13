@@ -10,10 +10,6 @@ loginForm.addEventListener('submit', (e) => { // Agrega un listener para el even
     if (!validUser) { // Si no se encuentra un usuario válido
         return window.location.href = 'login.html'; // Redirige de vuelta a la página de inicio de sesión
     
-
-
-
-        
     }
 
     localStorage.setItem('login_success', JSON.stringify(validUser)); // Establece el usuario como autenticado en el almacenamiento local
