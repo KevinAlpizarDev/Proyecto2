@@ -11,6 +11,14 @@ logout.addEventListener('click', () => {
     localStorage.removeItem('login_success')
     window.location.href = 'login.html'
 })
+
+
+
+
+
+
+
+
 // MODAL KEVIN
 const modales = document.querySelector('.modales');
 const overlay = document.querySelector('.overlay');
@@ -81,9 +89,9 @@ file.onchange = function () {
 };
 
 function showInfo() {
-    document.querySelectorAll('.employeeDetails').forEach(info => info.remove());
+    document.querySelectorAll('.personDetails').forEach(info => info.remove());
     getData.forEach((element, index) => {
-        let createElement = `<tr class="employeeDetails">
+        let createElement = `<tr class="Details">
             <td>${index + 1}</td>
             <td><img src="${element.picture}" onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" alt="" width="40" height="40"></td>
             <td name-row">${element.employeeName}</td>
